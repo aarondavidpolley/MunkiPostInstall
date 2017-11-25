@@ -2,13 +2,13 @@
 
 ################################################################################
 # Author:    Aaron Polley                                                      #
-# Date:      02/09/2017                                                        #
-# Version:   0.01                                                              #
-# Purpose:   Post install script for Munki 3                                   #
+# Date:      25/11/2017                                                        #
+# Version:   1.0                                                               #
+# Purpose:   Post install script for Munki 2/3. Run as root.                   #
 ################################################################################
 
 #---Variables and such---#
-script_version="0.01"
+script_version="1.0"
 user_id=`id -u`
 user_name=`id -un $user_id`
 home_dir=`dscl . read /Users/"$user_name" NFSHomeDirectory | awk '{print $2}'`
@@ -38,7 +38,7 @@ echo "$DateTime     - LoadUser:          $currentUser"
 
 	launchctl unload /Library/LaunchDaemons/com.googlecode.munki*
 	launchctl load -w /Library/LaunchDaemons/com.googlecode.munki*
-    
+
 
     # Run postinstall actions for all logged in users.
     for pid_uid in $(ps -axo pid,uid,args | grep -i "[l]oginwindow.app" | awk '{print $1 "," $2}'); do
