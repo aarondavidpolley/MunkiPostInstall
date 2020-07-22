@@ -1,6 +1,6 @@
 # MunkiPostInstall
 
-2020-07-22: MacAdmins slack user has confirmed this is compatible with Munki 5 and is still useful!
+2020-07-22: MacAdmins slack user franks has confirmed this is compatible with Munki 5 and is still useful!
 
 Munki 5 Without Script: https://www.dropbox.com/s/vatmssrqcsaw5hn/Aaron-no%20helper.mov?dl=0
 
